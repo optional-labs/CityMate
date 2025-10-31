@@ -1,0 +1,15 @@
+{
+  "originHash" : "f04bb4fe80a4dbe0f4e3d14415155107268c723928966f79a93ba82b83b50a75",
+  "pins" : [
+    {
+      "identity" : "colorskit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ckdash-git/ColorsKit.git",
+      "state" : {
+        "revision" : "1f6b0465f229eccba16193e205292248b8ea089f",
+        "version" : "0.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}
