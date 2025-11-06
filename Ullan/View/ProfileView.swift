@@ -12,7 +12,7 @@ struct ProfileOptions {
     let iconName: String
 }
 
-class ProfileView: UIViewController {
+class ProfileViewController: UIViewController {
 
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var contactNum: UILabel!
@@ -36,7 +36,6 @@ class ProfileView: UIViewController {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         super.viewDidLoad()
         self.edgesForExtendedLayout = [.bottom]
         
