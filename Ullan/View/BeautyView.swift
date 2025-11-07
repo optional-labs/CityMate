@@ -87,7 +87,7 @@ class BeautyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchBarView.layer.cornerRadius = 10
+        searchBarView.layer.cornerRadius = searchBarView.frame.size.height / 2
         searchBarView.layer.borderWidth = 1
         searchBarView.layer.borderColor = UIColor.lightGray.cgColor
         searchBarView.clipsToBounds = true
