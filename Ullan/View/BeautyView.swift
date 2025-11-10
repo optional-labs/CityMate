@@ -87,7 +87,7 @@ class BeautyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchBarView.layer.cornerRadius = 10
+        searchBarView.layer.cornerRadius = searchBarView.frame.size.height / 2
         searchBarView.layer.borderWidth = 1
         searchBarView.layer.borderColor = UIColor.lightGray.cgColor
         searchBarView.clipsToBounds = true
@@ -117,6 +117,8 @@ class BeautyViewController: UIViewController {
         spaForWomenAdBanner.clipsToBounds = true
         massageForMenAdBanner.layer.cornerRadius = 10
         massageForMenAdBanner.clipsToBounds = true
+        
+        carouselCollectionView.register(UINib(nibName: "ImageCarouselCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "carouselCell")
         
         if let layout = carouselCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
@@ -218,7 +220,7 @@ extension BeautyViewController: UICollectionViewDelegateFlowLayout, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == carouselCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCarouselCell", for: indexPath) as! ImageCarouselCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouselCell", for: indexPath) as! ImageCarouselCollectionViewCell
             let imageName = carouselImages[indexPath.row]
             cell.imageView.image = UIImage(named: imageName)
             return cell
